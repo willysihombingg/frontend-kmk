@@ -210,36 +210,30 @@
             </a>
           </li>
         </router-link>
-        <router-link
-          v-slot="{ isExactActive, href, navigate }"
-          :to="{ name: 'login' }"
-          custom
+        <li
+          class="px-4 cursor-pointer"
+          :class="[
+            isExactActive ? 'bg-blue-400' : 'hover:bg-blue-400 bg-blue-500',
+          ]"
         >
-          <li
-            class="px-4 cursor-pointer"
-            :class="[
-              isExactActive ? 'bg-blue-400' : 'hover:bg-blue-400 bg-blue-500',
-            ]"
-          >
-            <a class="py-3 flex items-center" :href="href" @click="navigate">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 mr-2"
-                fill="none"
-                viewBox="4 0 25 25"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M13.8418 17.385L15.262 15.9768L11.3428 12.0242L20.4857 12.0242C21.038 12.0242 21.4857 11.5765 21.4857 11.0242C21.4857 10.4719 21.038 10.0242 20.4857 10.0242L11.3236 10.0242L15.304 6.0774L13.8958 4.6572L7.5049 10.9941L13.8418 17.385Z"
-                />
-              </svg>
-              Log Out
-            </a>
-          </li>
-        </router-link>
+          <a class="py-3 flex items-center" :href="href" @click="onLogOut">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 mr-2"
+              fill="none"
+              viewBox="4 0 25 25"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13.8418 17.385L15.262 15.9768L11.3428 12.0242L20.4857 12.0242C21.038 12.0242 21.4857 11.5765 21.4857 11.0242C21.4857 10.4719 21.038 10.0242 20.4857 10.0242L11.3236 10.0242L15.304 6.0774L13.8958 4.6572L7.5049 10.9941L13.8418 17.385Z"
+              />
+            </svg>
+            Log Out
+          </a>
+        </li>
       </ul>
     </nav>
   </aside>
@@ -250,6 +244,15 @@ import { computed } from "vue";
 import { useRoute } from "vue-router";
 
 export default {
+  methods: {
+    onLogOut() {
+      console.log("ini log out");
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      this.$router.push("/login");
+    },
+  },
+
   setup() {
     const route = useRoute();
 

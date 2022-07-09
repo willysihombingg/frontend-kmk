@@ -10,6 +10,7 @@ export async function login(nim, password) {
     return response;
     // console.log(response, 'Respon API')
   } catch (error) {
+    console.log("login error message:", error.message);
     return error;
     // console.log('API ERROR', error)
   }
