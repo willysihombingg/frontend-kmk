@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "from": "KMK",
+    "to": "KBMK POLNES",
+    "receiver": "bagas@example.com",
+    "courier": "Super Admin",
+    "typeLetter": "ENTRY",
+    "entryDate": "25-03-12",
+    "outgoingDate": "25-03-12"
+  },
+  {
+    "id": 2,
+    "from": "KMK",
+    "to": "KBMK UNMUL",
+    "receiver": "bagas@example.com",
+    "courier": "Super Admin",
+    "typeLetter": "ENTRY",
+    "entryDate": "22-03-12",
+    "outgoingDate": "23-03-12"
+  },
+  {
+    "id": 3,
+    "from": "KMK",
+    "to": "KBMK POLNES",
+    "receiver": "bagas@example.com",
+    "courier": "Super Admin",
+    "typeLetter": "ENTRY",
+    "entryDate": "27-03-12",
+    "outgoingDate": "26-03-12"
+  },
+  {
+    "id": 4,
+    "from": "KMK",
+    "to": "KBMK POLNES",
+    "receiver": "bagas@example.com",
+    "courier": "Super Admin",
+    "typeLetter": "OUTGOING",
+    "entryDate": "28-03-12",
+    "outgoingDate": "29-03-12"
+  },
+  {
+    "id": 5,
+    "from": "KMK",
+    "to": "KBMK POLNES",
+    "receiver": "bagas@example.com",
+    "courier": "Super Admin",
+    "typeLetter": "OUTGOING",
+    "entryDate": "30-03-12",
+    "outgoingDate": "01-04-12"
+  }
+]
